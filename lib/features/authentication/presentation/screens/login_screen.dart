@@ -7,6 +7,7 @@ import 'package:promilo/core/extensions/media_query_extension.dart';
 import 'package:promilo/core/extensions/page_transition_extension.dart';
 import 'package:promilo/features/authentication/presentation/blocs/login/login_bloc.dart';
 import 'package:promilo/features/authentication/presentation/screens/widgets/button_loading_widget.dart';
+import 'package:promilo/features/base_screen/presentation/screens/base_screen.dart';
 import 'package:promilo/features/meet_up/presentation/screens/meet_up_screen.dart';
 import 'package:promilo/features/widgets/button_widget.dart';
 import 'package:promilo/features/authentication/presentation/screens/widgets/custom_divider.dart';
@@ -110,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       // Navigate to the HomeScreen when the user logs in successfully.
                       context.pushWithTransition(
-                        const MeetUpScreen(),
+                        const BaseScreen(),
                         PageTransitionType.fade,
                       );
 
