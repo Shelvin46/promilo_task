@@ -1,3 +1,5 @@
+import 'package:awesome_extensions/awesome_extensions.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:promilo/core/constants/text_style_constants.dart';
 
@@ -5,14 +7,17 @@ class CustomAppBarWidget extends StatelessWidget {
   const CustomAppBarWidget({
     super.key,
     this.title = "Individual Meetup",
+    this.fromMainScreen = false,
   });
 
   final String title;
 
+  final bool fromMainScreen;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 10, top: 10),
+      padding: EdgeInsets.only(left: fromMainScreen ? 20 : 10, top: 10),
       height: 65,
       decoration: const BoxDecoration(
         boxShadow: [],
@@ -25,12 +30,15 @@ class CustomAppBarWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          IconButton(
-            icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+          if (fromMainScreen)
+            const SizedBox.shrink()
+          else
+            IconButton(
+              icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+              onPressed: () {
+                context.pop();
+              },
+            ),
           Text(
             title,
             style: TextStyleConstants.subtitle,

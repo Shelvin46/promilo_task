@@ -29,7 +29,9 @@ class _MeetUpScreenState extends State<MeetUpScreen> {
     return BaseWidget(
         child: ListView(
       children: [
-        const CustomAppBarWidget(),
+        const CustomAppBarWidget(
+          fromMainScreen: true,
+        ),
         15.heightBox,
         Padding(
           padding: const EdgeInsets.only(left: 20),

@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       passwordFocusNode.unfocus();
 
                       // Navigate to the HomeScreen when the user logs in successfully.
-                      context.pushWithTransition(
+                      context.pushReplacementWithTransition(
                         const BaseScreen(),
                         PageTransitionType.fade,
                       );
