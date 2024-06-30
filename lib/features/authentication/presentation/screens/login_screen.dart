@@ -8,7 +8,6 @@ import 'package:promilo/core/extensions/page_transition_extension.dart';
 import 'package:promilo/features/authentication/presentation/blocs/login/login_bloc.dart';
 import 'package:promilo/features/authentication/presentation/screens/widgets/button_loading_widget.dart';
 import 'package:promilo/features/base_screen/presentation/screens/base_screen.dart';
-import 'package:promilo/features/meet_up/presentation/screens/meet_up_screen.dart';
 import 'package:promilo/features/widgets/button_widget.dart';
 import 'package:promilo/features/authentication/presentation/screens/widgets/custom_divider.dart';
 import 'package:promilo/features/authentication/presentation/screens/widgets/login_and_sign_up_options.dart';

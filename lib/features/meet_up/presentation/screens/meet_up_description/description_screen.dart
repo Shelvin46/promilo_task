@@ -7,6 +7,8 @@ import 'package:promilo/features/meet_up/presentation/screens/meet_up_descriptio
 import 'package:promilo/features/meet_up/presentation/screens/widgets/custom_app_bar_widget.dart';
 import 'package:promilo/features/widgets/base_widgets.dart';
 
+///[MeetUpDescriptionScreen] is the screen that shows the description of the meet up.
+///
 class MeetUpDescriptionScreen extends StatefulWidget {
   const MeetUpDescriptionScreen({super.key});
 
